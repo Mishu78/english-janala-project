@@ -25,6 +25,37 @@ const loadLevelWord=(id)=>{
         displayLevelWord(data.data)
     });
 } 
+
+const loadWordDetail=async(id)=>{
+    const url=`https://openapi.programming-hero.com/api/word/${id}`;
+    const res=await fetch(url);
+    const details=await res.json();
+    displayWorddetails(details.data)
+}
+const displayWorddetails=(word)=>{
+console.log(word)
+const detasilsBox=document.getElementById('details-container');
+detasilsBox.innerHTML=`
+<div class="">
+        <h2 class="font-bold text-2xl" >${word.word} (<i class="fa-solid fa-microphone"></i> : ${word.pronunciation})</h2>
+      </div>
+      <div class=""> 
+        <h2 class="font-bold">meaning</h2>
+        <p>${word.meaning}</p>
+      </div>
+      <div class="">
+        <h2 class="font-bold">Example</h2>
+        <p>${word.sentence}</p>
+      </div>
+      <div class="">
+        <h2 class="font-bold">Synonym</h2>
+        <span class="btn">syn1</span>
+        <span class="btn">syn1</span>
+        <span class="btn">syn1</span>
+      </div>
+`
+document.getElementById('word_modal').showModal();
+}
 const displayLevelWord=(words)=>{
     const wordContainer=document.getElementById('word-container')
     wordContainer.innerHTML='';
@@ -48,7 +79,7 @@ const displayLevelWord=(words)=>{
         <p class=font-semibold>Meaning/pronounciation</p>
         <div class="text-2xl font-medium font-bangla">${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation : "pronunciation পাওয়া যায়নি"}</div>
         <div class="flex justify-between items-center">   
-          <button onClick="my_modal_5.showModal()" class="btn bg-gray-200 hover:bg-gray-600"><i class="fa-solid fa-circle-info"></i></button>
+          <button onClick="loadWordDetail(${word.id})" class="btn bg-gray-200 hover:bg-gray-600"><i class="fa-solid fa-circle-info"></i></button>
           <button class="btn bg-gray-200 hover:bg-gray-600"><i class="fa-solid fa-volume-high"></i></button>
         </div>
       </div>
