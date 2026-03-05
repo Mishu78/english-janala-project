@@ -17,6 +17,11 @@ const loadLevelWord=(id)=>{
 const displayLevelWord=(words)=>{
     const wordContainer=document.getElementById('word-container')
     wordContainer.innerHTML='';
+
+    if(words.length == 0){
+        alert('no words detected');
+        return;
+    }
     for(const word of words){
     console.log(word);
     const card=document.createElement('div');
