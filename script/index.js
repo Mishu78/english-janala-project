@@ -48,7 +48,7 @@ const displayLevelWord=(words)=>{
         <p class=font-semibold>Meaning/pronounciation</p>
         <div class="text-2xl font-medium font-bangla">${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation : "pronunciation পাওয়া যায়নি"}</div>
         <div class="flex justify-between items-center">   
-          <button class="btn bg-gray-200 hover:bg-gray-600"><i class="fa-solid fa-circle-info"></i></button>
+          <button onClick="my_modal_5.showModal()" class="btn bg-gray-200 hover:bg-gray-600"><i class="fa-solid fa-circle-info"></i></button>
           <button class="btn bg-gray-200 hover:bg-gray-600"><i class="fa-solid fa-volume-high"></i></button>
         </div>
       </div>
