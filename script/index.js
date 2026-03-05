@@ -19,7 +19,13 @@ const displayLevelWord=(words)=>{
     wordContainer.innerHTML='';
 
     if(words.length == 0){
-        alert('no words detected');
+        wordContainer.innerHTML=`
+        <div class="text-center col-span-full rounded-xl py-10 space-y-6 font-bangla">
+        <img class="mx-auto" src='./assets/alert-error.png'/>
+        <p class="text-xl font-medium text-gray-600">এই lesson এ এখন কোনো vocabulary যুক্ত করা হয় নি </p>
+        <p class="font-bold text-4xl">next lesson এ যান</p>
+      </div>
+        `;
         return;
     }
     for(const word of words){
