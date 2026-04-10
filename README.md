@@ -1,116 +1,179 @@
-# ENGLISH <img width="25px" src="./assets/logo.png" /> JANALA
+# 🌟 English Janala
+
+### *An Interactive Vocabulary Learning Web App*
 
 ---
 
-## ⚡ API Endpoints
+<p align="center">
+  <b>Learn English vocabulary in a simple, smart, and engaging way 🚀</b>
+</p>
 
-1. Get ⚡ All Levels
+---
+
+## 📖 Overview
+
+**English Janala** is a modern and user-friendly vocabulary learning web application designed to make English learning easy and interactive.
+
+The application fetches lesson data dynamically from an API and presents it in a structured and visually appealing way. Users can explore vocabulary by lesson, search words instantly, and view detailed information through interactive modals.
+
+It focuses on clean UI, smooth user experience, and efficient data handling.
+
+---
+
+## 🌐 Live Demo
+
+🔗 **Live Website:**
+👉 https://mishu78.github.io/english-janala-project/
+
+---
+
+## 🖼️ Screenshots
+
+<p align="center">
+  <img src="./assets/1.png" width="80%" alt="Homepage"/>
+  <br/><br/>
+  <img src="./assets/2.png" width="80%" alt="Vocabulary Cards"/>
+  <br/><br/>
+</p>
+
+>
+
+---
+
+## 🛠️ Technology Stack
+
+| Category     | Technology Used           |
+| ------------ | ------------------------- |
+| 💻 Frontend  | HTML, CSS, JavaScript     |
+| ⚛️ Framework | React.js                  |
+| 🎨 Styling   | Tailwind CSS / Custom CSS |
+| 🌐 API       | External Vocabulary API   |
+| 🔧 Tools     | Git, GitHub, Vite         |
+
+---
+
+## ✨ Key Features
+
+✅ **Dynamic Lesson Loading** – Fetches lessons from API in real-time
+
+✅ **Interactive UI** – Clickable lesson buttons with active state highlight
+
+✅ **Vocabulary Cards** – Clean layout showing meaning & pronunciation
+
+✅ **Detailed Modal View** – Includes examples, synonyms, and pronunciation
+
+✅ **Search Functionality** – Instantly find words
+
+✅ **Smart UX Handling** –
+
+* Loading spinner during API calls ⏳
+* No data message handling ⚠️
+
+
+---
+
+## 📦 Dependencies
+
+Make sure you have:
+
+* **Node.js** (v14 or later)
+* **npm** or **yarn**
+
+### Install Dependencies
 
 ```bash
-https://openapi.programming-hero.com/api/levels/all
+npm install
 ```
 
-1. Get ⚡ Words by Levels <br/>
-   https:// openapi.programming-hero.com/api/level/{id}
+---
+
+## 🚀 Run Locally
+
+Follow these simple steps:
+
+### 1️⃣ Clone the Repository
 
 ```bash
-https://openapi.programming-hero.com/api/level/5
+git clone https://github.com/Mishu78/english-janala-project.git
 ```
 
-1. Get ⚡ Words Detail <br/>
-   https:// openapi.programming-hero.com/api/word/{id}
+### 2️⃣ Go to Project Folder
 
 ```bash
-https://openapi.programming-hero.com/api/word/5
+cd english-janala-project
 ```
 
-1. Get ⚡ All Words <br/>
+### 3️⃣ Install Packages
 
 ```bash
-https://openapi.programming-hero.com/api/words/all
+npm install
 ```
 
-# Work To do
+### 4️⃣ Start Development Server
 
-### 1. Show Levels on The UI
-
-- [ ] Show a center-aligned heading as Figma
-
----
-
-- [ ] Create dynamically generated buttons from **API-01** for each lesson
-- [ ] Lesson Buttons will be displayed on page load
-
----
-
-### 2. Show Word Cards Based on Level
-
-- [ ] Show a default text that will be displayed in the Vocabulary section initially
-- [ ] on Clicking a Specific Lesson Button Load All the words from **API-02**
-- [ ] Display all words for a selected lesson in a card format, showing:
-
-  - [ ] Word
-  - [ ] Word meaning & pronunciation
-  - [ ] Two buttons with relevant icons as per Figma
-
-- [ ] Show **\*No Word Found** message if no words exist for a lesson
-
----
-
-- [ ] Create functionality to highlight the active lesson button
-
----
-
-### 3. Use Different Color on The Active Level Button
-
-- [ ] After Successfully Loading words of a level , diffirentiate the button so user can understand which button is active
-
-### 4. Vocabulary Details
-
-- [ ] Create functionality to open a modal when clicking the details icon
-- [ ] Data will be load from **API-03**
-- [ ] modal will displays:
-  - [ ] Word with pronunciation
-  - [ ] Example sentence
-  - [ ] Synonyms
-  - [ ] A "Complete Learning" button to close the modal
-
-### 5. Handling Invalid Data
-
-- [ ] avoid displaying falsy values like `undefined` or `null`
-- [ ] display relevant words if no data is found
-
-### 6. Loading Spinner
-
-- [ ] Create a loading spinner that will be display when vocabulary is loading from API
-
-### 7. Implement Search Functionality
-
-- [ ] Take a input Box.
-- [ ] on Changing value It will Search word and show in the UI.
-- [ ] If anyone Do search reset active button
-
-### 8. Save Word Feature
-
-- [ ] in the UI of Card add a button `Heart icon`
-- [ ] on Clicking it. Store the Word in the Saved Box
-- [ ] Show Saved words in a Different Section.
-
-### 9. Speak your Vocabularies
-
-- [ ] Create functionality for voice pronunciation of vocabulary words
-- [ ] Use below function and implement on clicking sound icon
-
-```js
-function pronounceWord(word) {
-  const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = "en-EN"; // English
-  window.speechSynthesis.speak(utterance);
-}
+```bash
+npm run dev
 ```
 
-For More >> you can explore this implementation 👉 [https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ](https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ)
+### 5️⃣ Open in Browser
+
+```
+http://localhost:5173
+```
 
 ---
-Bonus : How to create Private Repository for next assignments
-## Test Repo - :  https://classroom.github.com/a/Fgjib-lr
+
+## 📁 Project Structure (Optional)
+
+```
+english-janala/
+│── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│── public/
+│── screenshots/
+│── package.json
+│── README.md
+```
+
+---
+
+## 🔗 Relevant Links
+
+* 📂 **GitHub Repository**
+  👉 https://github.com/Mishu78/english-janala-project
+
+* 🌍 **Live Website**
+  👉 https://mishu78.github.io/english-janala-project/
+
+---
+
+## 🎯 Future Improvements
+
+* 🔊 Add audio pronunciation
+* 🌙 Dark mode support
+* 📱 Improve mobile responsiveness
+* 📊 User progress tracking
+
+---
+
+## 🤝 Contribution
+
+Contributions are welcome!
+Feel free to fork the repo and submit a pull request.
+
+---
+
+## 📌 Author
+
+👩‍💻 **Meherun Nesa Mishu**
+Passionate about building interactive and user-friendly web applications.
+
+---
+
+<p align="center">
+  ⭐ If you like this project, don't forget to star the repository!
+</p>
+
+---
